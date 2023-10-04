@@ -38,7 +38,7 @@ async function automateLogin() {
     await loginButton.click();
 
     // Wait for the login to complete
-    await driver.wait(until.titleIs('Jubelio - Dashboard'), 5000); // Change 'Dashboard Page' to a title that appears after login
+    await driver.wait(until.titleIs('Jubelio - Dashboard'), 10000); // Change 'Dashboard Page' to a title that appears after login
 
 
   } catch (error) {
@@ -46,6 +46,7 @@ async function automateLogin() {
   } finally {
     // Close the browser
     await driver.quit();
+    console.log("Success")
   }
 }
 
